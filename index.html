@@ -4,47 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams Rooms Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gradient-start: #2B2E4A;
+            --gradient-end: #1A1B2E;
+            --accent: #4B6EFF;
+            --text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #4B6EFF, #7C8FFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: #7C8FFF;
+        }
+
+        .instruction-list {
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .instruction-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .instruction-list li i {
+            margin-right: 1rem;
+            color: var(--accent);
+        }
+
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .instruction-list {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <div class="container">
+        <header>
             <img src="teams-logo.png" alt="Teams Logo" class="logo">
             <h1>Teams Rooms Guide</h1>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <div class="card-container">
-            <div class="card">
+        <div class="content-grid">
+            <section class="section">
                 <h2>Teams Roomsデバイスの使用方法</h2>
-                <div class="card-content">
-                    <h3>基本的な使い方</h3>
-                    <ul>
-                        <li>会議室に入室する</li>
-                        <li>タッチスクリーンで会議を開始</li>
-                        <li>音声とビデオの確認</li>
-                    </ul>
-                    <!-- 実際の手順に合わせてコンテンツを追加 -->
-                </div>
-            </div>
+                <h3>基本的な使い方</h3>
+                <ul class="instruction-list">
+                    <li><i class="fas fa-door-open"></i>会議室に入室する</li>
+                    <li><i class="fas fa-hand-pointer"></i>タッチスクリーンで会議を開始</li>
+                    <li><i class="fas fa-volume-up"></i>音声とビデオの確認</li>
+                </ul>
+            </section>
 
-            <div class="card">
+            <section class="section">
                 <h2>BYOM接続方法</h2>
-                <div class="card-content">
-                    <h3>接続手順</h3>
-                    <ul>
-                        <li>ノートPCを持ち込む</li>
-                        <li>ケーブルを接続</li>
-                        <li>画面共有を開始</li>
-                    </ul>
-                    <!-- 実際の手順に合わせてコンテンツを追加 -->
-                </div>
-            </div>
+                <h3>接続手順</h3>
+                <ul class="instruction-list">
+                    <li><i class="fas fa-laptop"></i>ノートPCを持ち込む</li>
+                    <li><i class="fas fa-plug"></i>ケーブルを接続</li>
+                    <li><i class="fas fa-desktop"></i>画面共有を開始</li>
+                </ul>
+            </section>
         </div>
-    </main>
+    </div>
 </body>
 </html>
