@@ -1,0 +1,116 @@
+:root {
+    --teams-primary: #464EB8;
+    --teams-secondary: #6264A7;
+    --background: #F8F9FA;
+    --text: #212529;
+    --card-background: #FFFFFF;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--teams-primary);
+    color: white;
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    transition: transform 0.3s ease;
+}
+
+.card h2 {
+    color: var(--teams-primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--teams-primary);
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+    color: var(--teams-secondary);
+}
+
+.card-content {
+    font-size: 16px;
+}
+
+.card-content ul {
+    list-style-position: inside;
+    padding-left: 16px;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+}
