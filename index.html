@@ -32,14 +32,17 @@
         }
 
         .container {
-            max-width: 1700px;
+            max-width: 100%;
             margin: 0 auto;
-            width: 95%;
+            width: 98%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-
+        
         header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2vh;
         }
 
         .logo {
@@ -62,32 +65,20 @@
         }
 
         .section {
-            background: var(--section-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 8px 32px var(--shadow);
+            padding: 2vw;
+            font-size: clamp(0.8rem, 1.5vw, 2rem);
         }
-
+        
         .section h2 {
-            font-size: 2.3rem;
-            margin-bottom: 1.8rem;
-            color: var(--text-secondary);
-            word-break: keep-all;
-            line-height: 1.4;
+            font-size: clamp(1.2rem, 2vw, 2.3rem);
         }
-
+        
         .section h3 {
-            font-size: 1.8rem;
-            margin: 1.5rem 0;
-            color: #464EB8;
+            font-size: clamp(1rem, 1.8vw, 1.8rem);
         }
-
+        
         .instruction-list {
-            list-style: none;
-            font-size: 1.5rem;
-            line-height: 1.8;
+            font-size: clamp(0.8rem, 1.5vw, 1.5rem);
         }
 
         .instruction-list li {
@@ -103,23 +94,8 @@
             width: 30px;
         }
 
-        /* @media (max-width: 1600px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .instruction-list {
-                font-size: 1.2rem;
-            }
-        } */
+        @media (max-width: 1600px) {
+        }
 
         /* アニメーション効果（オプション） */
         .section {
