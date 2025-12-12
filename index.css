@@ -29,9 +29,9 @@ header {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -49,23 +49,24 @@ h1 {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     margin-top: 20px;
 }
 
 .card {
+    min-width: 600px;
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 24px;
+    padding: 32px;
     transition: transform 0.3s ease;
 }
 
@@ -97,13 +98,17 @@ main {
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
     .card-container {
         grid-template-columns: 1fr;
     }
 
     h1 {
         font-size: 24px;
+    }
+
+    .card {
+        min-width: auto;  /* モバイル表示時は最小幅を解除 */
     }
 
     .card h2 {
