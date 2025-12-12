@@ -40,7 +40,7 @@ header {
 
 .logo {
     height: 18px;
-    width: auto;
+    margin-bottom: 1rem;
 }
 
 h1 {
