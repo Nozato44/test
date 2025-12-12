@@ -40,7 +40,7 @@ header {
 
 .logo {
     height: 4px;
-    width: auto;
+    width: 4px;
 }
 
 h1 {
@@ -56,18 +56,19 @@ main {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(800px, 1fr));
     gap: 40px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .card {
-    min-width: 600px;
+    width: 100%;
+    min-width: 800px;
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 32px;
-    transition: transform 0.3s ease;
 }
 
 .card h2 {
@@ -108,7 +109,8 @@ main {
     }
 
     .card {
-        min-width: auto;  /* モバイル表示時は最小幅を解除 */
+        min-width: 100%;
+        width: 100%;
     }
 
     .card h2 {
