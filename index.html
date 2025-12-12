@@ -32,17 +32,14 @@
         }
 
         .container {
-            max-width: 100%;
+            max-width: 1700px;
             margin: 0 auto;
-            width: 98%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+            width: 95%;
         }
-        
+
         header {
             text-align: center;
-            margin-bottom: 2vh;
+            margin-bottom: 3rem;
         }
 
         .logo {
@@ -60,32 +57,37 @@
 
         .content-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2vw;
-            flex-grow: 1;
-            width: 100%;
+            grid-template-columns: repeat(2, minmax(750px, 1fr));
+            gap: 3rem;
         }
 
         .section {
-            padding: 2vw;
-            font-size: clamp(0.8rem, 1.5vw, 2rem);
             background: var(--section-bg);
             backdrop-filter: blur(10px);
             border-radius: 20px;
+            padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px var(--shadow);
         }
-        
+
         .section h2 {
-            font-size: clamp(1.2rem, 2vw, 2.3rem);
+            font-size: 2.3rem;
+            margin-bottom: 1.8rem;
+            color: var(--text-secondary);
+            word-break: keep-all;
+            line-height: 1.4;
         }
-        
+
         .section h3 {
-            font-size: clamp(1rem, 1.8vw, 1.8rem);
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: #464EB8;
         }
-        
+
         .instruction-list {
-            font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 1.8;
         }
 
         .instruction-list li {
@@ -102,6 +104,21 @@
         }
 
         @media (max-width: 1600px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .instruction-list {
+                font-size: 1.2rem;
+            }
         }
 
         /* アニメーション効果（オプション） */
