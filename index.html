@@ -126,18 +126,22 @@
 
         .section h2 {
             font-size: calc(var(--base-font-size) * 1.5);
-            margin-bottom: 2rem;
-            margin-top: 1rem; /* ロゴとの間隔を確保 */
+            margin-bottom: 1.5rem; /* 区切り線との間隔を調整 */
+            margin-top: 1rem;
             color: #464EB8;
             word-break: keep-all;
             line-height: 1.4;
             text-align: center;
+            padding-bottom: 1rem; /* 下部に余白を追加 */
+            border-bottom: 1px solid #ddd; /* 細い区切り線を追加 */
+            /* または以下のようなグラデーションの区切り線も選択可能です
+            border-bottom: 1px solid rgba(70, 78, 184, 0.2); */
         }
-
+        
         .section h3 {
             font-size: calc(var(--base-font-size) * 1.2);
             margin: 1rem 0;
-            margin-top: 1rem;
+            margin-top: 1.5rem; /* 区切り線との間隔を調整 */
             color: #464EB8;
         }
 
