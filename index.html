@@ -45,22 +45,27 @@
 
         .logo {
             width: 60px;
+            height: 60px; /* 高さを固定 */
             margin: 1rem auto;
             display: block;
+            object-fit: contain; /* アスペクト比を保持 */
         }
-
+        
         .logo-container {
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin: 1rem auto;
+            height: 92px; /* Teamsロゴと同じ高さ（60px + margin上下1rem = 92px） */
+            align-items: center; /* 中央揃え */
         }
         
         .logo-container .logo {
             width: 60px;
+            height: 60px; /* 高さを固定 */
             margin: 0; /* 既存のmarginをリセット */
+            object-fit: contain; /* アスペクト比を保持 */
         }
-
         h1 {
             font-size: calc(var(--base-font-size) * 2.3);
             margin-bottom: 2rem;
