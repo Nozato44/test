@@ -46,7 +46,7 @@
         .logo {
             width: 60px;
             height: 60px;
-            margin: 1rem auto;
+            margin: 0.5rem auto;
             display: block;
             object-fit: contain;
         }
@@ -55,7 +55,7 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 0.5rem auto; /* 1remから0.5remに減らして上下の余白を縮小 */
+            margin: 0.25rem auto; /* 1remから0.5remに減らして上下の余白を縮小 */
             height: 80px; /* 92pxから80pxに縮小して全体の高さを調整 */
             align-items: center;
         }
@@ -85,9 +85,10 @@
             background: var(--section-bg);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 1.5rem 2rem 2rem 2rem; /* 上部のパディングのみ1.5remに変更 */
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px var(--shadow);
+            transition: transform 0.3s ease;
         }
 
         .section .subtitle {
@@ -101,7 +102,7 @@
         .section h2 {
             font-size: calc(var(--base-font-size) * 1.5);
             margin-bottom: 0.5rem; /* 余白を少し縮める */
-            margin-top: 0.5rem;
+            margin-top: 0.25rem;
             color: #464EB8; /* より濃い青 */
             word-break: keep-all;
             line-height: 1.4;
