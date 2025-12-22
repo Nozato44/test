@@ -46,26 +46,28 @@
         .logo {
             width: 60px;
             height: 60px;
-            margin: 0.5rem auto;
+            margin: 0 auto; /* 上下マージンを0に */
             display: block;
             object-fit: contain;
         }
         
+        /* logo-containerの調整 */
         .logo-container {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 0.25rem auto; /* 1remから0.5remに減らして上下の余白を縮小 */
-            height: 80px; /* 92pxから80pxに縮小して全体の高さを調整 */
+            margin: 0 auto; /* 上下マージンを0に */
+            height: 60px; /* 高さを60pxに縮小 */
             align-items: center;
         }
         
         .logo-container .logo {
             width: 60px;
-            height: 60px; /* 高さを固定 */
-            margin: 0; /* 既存のmarginをリセット */
-            object-fit: contain; /* アスペクト比を保持 */
+            height: 60px;
+            margin: 0;
+            object-fit: contain;
         }
+
         
         h1 {
             font-size: calc(var(--base-font-size) * 2.3);
@@ -85,7 +87,7 @@
             background: var(--section-bg);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 1.5rem 2rem 2rem 2rem; /* 上部のパディングのみ1.5remに変更 */
+            padding: 1rem 2rem 2rem 2rem; /* 上部のパディングを1remに縮小 */
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px var(--shadow);
             transition: transform 0.3s ease;
@@ -101,9 +103,9 @@
 
         .section h2 {
             font-size: calc(var(--base-font-size) * 1.5);
-            margin-bottom: 2rem; /* 余白を少し縮める */
-            margin-top: 0.25rem;
-            color: #464EB8; /* より濃い青 */
+            margin-bottom: 2rem;
+            margin-top: 1rem; /* ロゴとの間隔を確保 */
+            color: #464EB8;
             word-break: keep-all;
             line-height: 1.4;
             text-align: center;
