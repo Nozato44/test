@@ -68,6 +68,29 @@
             object-fit: contain;
         }
 
+        .numbered-list {
+            list-style: none;
+            counter-reset: step-counter;
+            font-size: var(--base-font-size);
+            line-height: 1.6;
+        }
+        
+        .numbered-list li {
+            counter-increment: step-counter;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .numbered-list li::before {
+            content: counter(step-counter);
+            margin-right: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            min-width: 24px;
+            text-align: center;
+        }
         
         h1 {
             font-size: calc(var(--base-font-size) * 2.3);
@@ -158,22 +181,23 @@
             <h1>会議デバイスの使い方</h1>
         </header>
 
-        <div class="content-grid">
+            <!-- セクション1 -->
             <section class="section">
                 <img src="logo_Teams.PNG" alt="Teams Logo" class="logo">
                 <h2>Teams を使う場合</h2>
                 <h3>予約方法</h3>
-                <ul class="instruction-list">
-                    <li><i class="fa-regular fa-calendar-plus"></i>Teamsアプリで会議を新規作成</li>
-                    <li><i class="fa-solid fa-user-pen"></i>会議作成時に、出席者に会議室名を入力</li>
+                <ul class="numbered-list">
+                    <li>Teamsアプリで会議を新規作成</li>
+                    <li>会議作成時に、出席者に会議室名を入力</li>
                 </ul>
                 <h3>参加方法</h3>
-                <ul class="instruction-list">
-                <li><i class="fa-solid fa-door-open"></i>タッチコントローラーの参加ボタンを選択</li>
-                <li><i class="fa-solid fa-volume-high"></i>Teamsアプリで「部屋の音声」を選んで参加</li>
+                <ul class="numbered-list">
+                    <li>タッチコントローラーの参加ボタンを選択</li>
+                    <li>Teamsアプリで「部屋の音声」を選んで参加</li>
                 </ul>
             </section>
 
+            <!-- セクション2 -->
             <section class="section">
                 <div class="logo-container">
                     <img src="logo_Zoom.png" alt="Zoom Logo" class="logo">
@@ -181,11 +205,11 @@
                 </div>
                 <h2>Zoom/Meet を使う場合</h2>
                 <h3>会議室のスピーカーとカメラで会議に参加</h3>
-                <ul class="instruction-list">
-                    <li><i class="fas fa-plug" style="margin-left: 6px;"></i>会議室のUSB-CケーブルをPCに差し込む</li>
-                    <li><i class="fa-solid fa-tv"></i>タッチコントローラーの「はい」を押して、</br>会議室モニターにPC画面が映ることを確認</li>
-                    <li><i class="fas fa-laptop"></i>接続したPCで、Zoom/Meetの会議を開く</li>
-                    <li><i class="fa-solid fa-volume-high"></i>Zoom/Meetの音声とビデオの設定で、</br>会議室のスピーカーとカメラを選択して会議に参加</li>
+                <ul class="numbered-list">
+                    <li>会議室のUSB-CケーブルをPCに差し込む</li>
+                    <li>タッチコントローラーの「はい」を押して、<br>会議室モニターにPC画面が映ることを確認</li>
+                    <li>接続したPCで、Zoom/Meetの会議を開く</li>
+                    <li>Zoom/Meetの音声とビデオの設定で、<br>会議室のスピーカーとカメラを選択して会議に参加</li>
                 </ul>
             </section>
         </div>
