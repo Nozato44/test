@@ -55,8 +55,8 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 1rem auto;
-            height: 92px; /* Teamsロゴと同じ高さ */
+            margin: 0.5rem auto; /* 1remから0.5remに減らして上下の余白を縮小 */
+            height: 80px; /* 92pxから80pxに縮小して全体の高さを調整 */
             align-items: center;
         }
         
@@ -93,11 +93,11 @@
         .section h2 {
             font-size: calc(var(--base-font-size) * 1.5);
             margin-bottom: 1.5rem;
+            margin-top: 0.5rem; /* 1remから0.5remに減らして上の余白を縮小 */
             color: var(--text-secondary);
             word-break: keep-all;
             line-height: 1.4;
             text-align: center;
-            margin-top: 1rem;
         }
 
         .section h3 {
